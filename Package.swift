@@ -6,7 +6,7 @@ let package = Package(
     name: "test-app",
     platforms: [
         .iOS(.v15),
-        .macOS(.v14),
+        .macOS(.v13),
         .tvOS(.v13),
         .watchOS(.v6),
     ],
