@@ -6,7 +6,7 @@ orbs:
 xcode_version: &xcode_version 14.2
 iphone_name: &iphone_name iPhone 8
 
-workflows:
+jobs:
     version: 2
     build:
         steps:
