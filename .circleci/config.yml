@@ -9,7 +9,7 @@ iphone_name: &iphone_name iPhone 8
 jobs:
     build:
         macos:
-            xcode_version: 14.2
+            xcode: 14.2
         steps:
             - checkout
             - run:
