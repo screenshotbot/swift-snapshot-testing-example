@@ -14,7 +14,7 @@ jobs:
             - checkout
             - run:
                 name: Swift tests
-                command: swift test
+                command: swift test -v
                 
 workflows:
     version: 2
