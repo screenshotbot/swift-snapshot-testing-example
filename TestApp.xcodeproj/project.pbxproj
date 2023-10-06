@@ -78,6 +78,7 @@
 		AF4F6EEB2AD0B1A100C57039 = {
 			isa = PBXGroup;
 			children = (
+				AF4F6F252AD0C29700C57039 /* New Group */,
 				AF4F6F212AD0BE3E00C57039 /* Package.swift */,
 				AF4F6F232AD0C21B00C57039 /* .gitignore */,
 				AF4F6EF62AD0B1A100C57039 /* TestApp */,
@@ -131,6 +132,13 @@
 				AF4F6F142AD0B1A200C57039 /* TestAppUITestsLaunchTests.swift */,
 			);
 			path = TestAppUITests;
+			sourceTree = "<group>";
+		};
+		AF4F6F252AD0C29700C57039 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,0 +1,15 @@
+version: 2.1
+
+orbs:
+  macos: circleci/macos@2
+
+xcode_version: &xcode_version 14.2
+iphone_name: &iphone_name iPhone 8
+
+workflows:
+    version: 2
+    build:
+        steps:
+            - checkout
+            - run: swift test
+            
