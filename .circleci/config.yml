@@ -13,4 +13,10 @@ jobs:
             - run:
                 name: Swift tests
                 command: swift test
+                
+workflows:
+    version: 2
+    build:
+        jobs:
+            - build
             
