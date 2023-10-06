@@ -11,5 +11,7 @@ jobs:
     build:
         steps:
             - checkout
-            - run: swift test
+            - run:
+                name: Swift tests
+                command: swift test
             
