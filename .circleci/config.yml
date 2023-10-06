@@ -3,13 +3,13 @@ version: 2.1
 orbs:
   macos: circleci/macos@2
 
-xcode_version: &xcode_version 14.2
+xcode_version: &xcode_version 15.0
 iphone_name: &iphone_name iPhone 8
 
 jobs:
     build:
         macos:
-            xcode: 14.2
+            xcode: 15.0
         steps:
             - checkout
             - run:
