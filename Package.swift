@@ -32,7 +32,8 @@ let package = Package(
         .testTarget(
             name: "TestAppTests",
             dependencies: [
-                "TestApp"
+                "TestApp",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
             ],
             path: "TestAppTests"
         ),

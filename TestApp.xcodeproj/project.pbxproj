@@ -16,6 +16,7 @@
 		AF4F6F152AD0B1A200C57039 /* TestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F6F142AD0B1A200C57039 /* TestAppUITestsLaunchTests.swift */; };
 		AF4F6F222AD0BE3E00C57039 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F6F212AD0BE3E00C57039 /* Package.swift */; };
 		AF4F6F242AD0C21B00C57039 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AF4F6F232AD0C21B00C57039 /* .gitignore */; };
+		AF5E1F3A2AD0CFD60093784D /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E1F392AD0CFD60093784D /* ContentViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		AF4F6F142AD0B1A200C57039 /* TestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF4F6F212AD0BE3E00C57039 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		AF4F6F232AD0C21B00C57039 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AF5E1F392AD0CFD60093784D /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4F6F082AD0B1A200C57039 /* TestAppTests.swift */,
+				AF5E1F392AD0CFD60093784D /* ContentViewTest.swift */,
 			);
 			path = TestAppTests;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5E1F3A2AD0CFD60093784D /* ContentViewTest.swift in Sources */,
 				AF4F6F092AD0B1A200C57039 /* TestAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
