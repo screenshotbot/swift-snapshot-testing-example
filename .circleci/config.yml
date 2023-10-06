@@ -7,6 +7,8 @@ xcode_version: &xcode_version 14.2
 iphone_name: &iphone_name iPhone 8
 
 jobs:
+    macos:
+        xcode_version: 14.2
     build:
         steps:
             - checkout
