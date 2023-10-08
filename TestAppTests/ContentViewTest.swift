@@ -5,10 +5,12 @@
 //  Created by Arnold Noronha on 10/6/23.
 //
 
-import XCTest
-import TestApp
-import SwiftUI
+#if canImport(UIKit)
 import SnapshotTesting
+import XCTest
+import UIKit.UIImage
+@testable import TestApp
+import SwiftUI
 
 final class ContentViewTest: XCTestCase {
 
@@ -21,14 +23,18 @@ final class ContentViewTest: XCTestCase {
     }
 
     func testExample() throws {
-        var view = VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        /* let view = View {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
+        }*/
         
+        let view = ContentView()
         
+        assertSnapshot(of: view as ContentView, as: .image)
     }
 
     func testPerformanceExample() throws {
@@ -39,3 +45,4 @@ final class ContentViewTest: XCTestCase {
     }
 
 }
+#endif
