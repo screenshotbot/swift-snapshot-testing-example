@@ -1,24 +1,45 @@
+# .circleci/config.yml
 version: 2.1
-
-orbs:
-  macos: circleci/macos@2
-
-xcode_version: &xcode_version 15.0
-iphone_name: &iphone_name iPhone 8
-
 jobs:
-    build:
-        macos:
-            xcode: 15.0
-        steps:
-            - checkout
-            - run:
-                name: Run tests
-                command: xcodebuild test -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 15'
-                
+  build-and-test:
+    macos:
+      xcode: 15.0
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: test
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $FASTLANE_LANE
+      - store_artifacts:
+          path: output
+      - store_test_results:
+          path: output/scan
+
+  adhoc:
+    macos:
+      xcode: 15.0
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: adhoc
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $FASTLANE_LANE
+      - store_artifacts:
+          path: output
+
 workflows:
-    version: 2
-    build:
-        jobs:
-            - build
-            
+  build-test-adhoc:
+    jobs:
+      - build-and-test
+      - adhoc:
+          filters:
+            branches:
+              only: development
+          requires:
+            - build-and-test
