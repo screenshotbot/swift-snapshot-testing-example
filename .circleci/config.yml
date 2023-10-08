@@ -13,8 +13,8 @@ jobs:
         steps:
             - checkout
             - run:
-                name: Swift tests
-                command: swift test -v
+                name: Run tests
+                command: xcodebuild test -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 15'
                 
 workflows:
     version: 2
